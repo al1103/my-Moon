@@ -70,3 +70,14 @@ p {
   transform: translateX(-50%);
   bottom: 10px;
 }
+@media screen and (max-width: 768px){
+
+  p {
+    font-size: 8px;
+  }
+  h1 {
+    font-size: 12px;
+  }
+
+  
+}
