@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "Meila";
+  src: url("./Meila-LineLight.otf");
+}
+
+@font-face {
+  font-family: "Pecita";
+  src: url("./Pecita.otf");
+}
+
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* Style the body */
+body {
+  font-family: Arial, sans-serif; /* Change font family as needed */
+  background-color: #f0f0f0; /* Change background color as needed */
+  padding: 20px; /* Add padding to body */
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Style the div containing the image */
+div:first-child {
+  text-align: center; /* Center align the content inside the div */
+}
+
+/* Style the div containing select and h1 */
+div:last-child {
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column; /* Stack items vertically */
+  margin-bottom: 20px; /* Add margin between divs */
+}
+
+/* Style the select element */
+select {
+  padding: 10px; /* Add padding to select */
+  border-radius: 5px; /* Add border radius to select */
+  border: 1px solid #ccc; /* Add border to select */
+  margin-bottom: 10px; /* Add margin below select */
+}
+
+/* Style the h1 element */
+h1 {
+  margin-top: 20px;
+  color: #333; /* Change text color as needed */
+  font-size: 24px; /* Change font size as needed */
+  font-weight: bold; /* Add font weight as needed */
+  font-family: Meila, sans-serif;
+}
+img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 40px;
+}
+p {
+  margin-top: 10px;
+  font-family: Pecita, sans-serif;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.copyright {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+}
