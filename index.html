@@ -1,30 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Moon</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="preload" as="image" href="./image/0.png">
-</head>
-<body>
-    <div>
-        <img src="./image/0.png" alt="Moon image" id="img" width="300" height="300">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="image-container">
+      <div class="loader" id="loader"></div>
+      <img
+        src="./image/0.png"
+        alt="Moon image"
+        id="img"
+        width="300"
+        height="300"
+      />
     </div>
     <div>
-        <select id="changeImg" aria-label="Chọn từng cái bên dưới">
-            <option value="0">Chọn từng cái bên dưới</option>
-            <option value="1">144p</option>
-            <option value="2">240p</option>
-            <option value="3">360p</option>
-            <option value="4">720p</option>
-            <option value="5">1080p</option>
-        </select>
+      <select id="changeImg" aria-label="Chọn từng cái bên dưới">
+        <option value="0">Chọn từng cái bên dưới</option>
+        <option value="1">144p</option>
+        <option value="2">240p</option>
+        <option value="3">360p</option>
+        <option value="4">720p</option>
+        <option value="5">1080p</option>
+      </select>
     </div>
     <div class="copyright">
-        <h1>Code by Zilong. 2024 ©</h1>
-        <p>Free to use for non-commercial purposes. Please attribute when using.</p>
+      <h1>Code by Zilong. 2024 ©</h1>
+      <p>
+        Free to use for non-commercial purposes. Please attribute when using.
+      </p>
     </div>
-    <script src="./main.js" defer></script>
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>

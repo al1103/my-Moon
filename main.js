@@ -1,20 +1,25 @@
-const img = document.getElementById("img");
-const changeImg = document.getElementById("changeImg");
-const imageSizes = ["0", "144p", "240p", "360p", "720p", "1080p"];
-
-// Preload all images
-imageSizes.forEach((size) => {
-  const link = document.createElement("link");
-  link.rel = "prefetch";
-  link.as = "image";
-  link.href = `./image/${size}.png`;
-  document.head.appendChild(link);
-});
-
-// Ensure image 0 is loaded immediately
-img.src = "./image/0.png";
+const album = [
+  "./image/0.png",
+  "https://firebasestorage.googleapis.com/v0/b/blog-upload-image.appspot.com/o/mymoon%2F1.png?alt=media&token=16a78d21-4c43-4bb1-a7f6-56b59dbf237f",
+  "https://firebasestorage.googleapis.com/v0/b/blog-upload-image.appspot.com/o/mymoon%2F2.png?alt=media&token=27c9645c-4c34-4d66-a121-b75ec3411624",
+  "https://firebasestorage.googleapis.com/v0/b/blog-upload-image.appspot.com/o/mymoon%2F3.png?alt=media&token=b7389b8e-5b6d-444e-9402-b1664dc93e6b",
+  "https://firebasestorage.googleapis.com/v0/b/blog-upload-image.appspot.com/o/mymoon%2F4.png?alt=media&token=f0b3ce8e-5a01-4ee7-9366-b81eed6bbee3",
+  "https://firebasestorage.googleapis.com/v0/b/blog-upload-image.appspot.com/o/mymoon%2F5.png?alt=media&token=d1603afe-2380-409c-b29f-742cf17792de",
+];
 
 changeImg.addEventListener("change", function () {
-  const selectedSize = this.value;
-  img.src = `./image/${selectedSize}.png`;
+  const selectedValue = this.value;
+  if (selectedValue !== "0") {
+    loader.style.display = "block";
+    img.style.opacity = "0.5";
+
+    const newSrc = `${album[selectedValue]}`;
+
+    img.onload = function () {
+      loader.style.display = "none";
+      img.style.opacity = "1";
+    };
+
+    img.src = newSrc;
+  }
 });
