@@ -1,20 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Moon</title>
+    <title>Hình Ảnh Mặt Trăng Chất Lượng Cao - My Moon</title>
+    <meta name="description" content="my moon" />
+    <meta name="keywords" content="my moon" />
+    <meta name="author" content="Zilong" />
+    <link rel="canonical" href="https://www.yourdomain.com/index.html" />
+    <meta property="og:title" content="my moon" />
+    <meta property="og:description" content="my moon" />  
+    <meta
+      property="og:image"
+      content="https://www.yourdomain.com/image/0.png"
+    />
+    <meta property="og:url" content="https://www.yourdomain.com/index.html" />
+    <meta property="og:type" content="website" />
     <link rel="stylesheet" href="style.css" />
+    <!-- Thêm preload cho hình ảnh đầu tiên -->
+    <link rel="preload" href="./image/0.png" as="image" />
+    <!-- Thêm async cho script -->
+    <script src="main.js" async></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "My Moon",
+        "description": "Trang web cung cấp hình ảnh mặt trăng chất lượng cao",
+        "url": "https://www.yourdomain.com",
+        "author": {
+          "@type": "Person",
+          "name": "Zilong"
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://cloudflareimages.your-domain.com">
   </head>
   <body>
     <div class="image-container">
       <div class="loader" id="loader"></div>
       <img
-        src="./image/0.png"
+        src="https://cloudflareimages.your-domain.com/image-id"
         alt="Moon image"
         id="img"
         width="300"
         height="300"
+        loading="lazy"
       />
     </div>
     <div>
@@ -33,6 +64,5 @@
         Free to use for non-commercial purposes. Please attribute when using.
       </p>
     </div>
-    <script src="main.js"></script>
   </body>
 </html>

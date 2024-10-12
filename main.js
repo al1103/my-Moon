@@ -7,19 +7,20 @@ const album = [
   "https://firebasestorage.googleapis.com/v0/b/blog-upload-image.appspot.com/o/mymoon%2F5.png?alt=media&token=d1603afe-2380-409c-b29f-742cf17792de",
 ];
 
-changeImg.addEventListener("change", function () {
+document.getElementById('changeImg').addEventListener('change', function() {
+  const img = document.getElementById('img');
+  const loader = document.getElementById('loader');
   const selectedValue = this.value;
-  if (selectedValue !== "0") {
-    loader.style.display = "block";
-    img.style.opacity = "0.5";
-
-    const newSrc = `${album[selectedValue]}`;
-
-    img.onload = function () {
-      loader.style.display = "none";
-      img.style.opacity = "1";
-    };
-
-    img.src = newSrc;
-  }
+  
+  loader.style.display = 'block';
+  img.style.opacity = '0';
+  
+  const newSrc = `https://cloudflareimages.your-domain.com/image-id-${selectedValue}`;
+  
+  img.onload = function() {
+    loader.style.display = 'none';
+    img.style.opacity = '1';
+  };
+  
+  img.src = newSrc;
 });

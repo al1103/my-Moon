@@ -8,89 +8,93 @@
   src: url("./Pecita.otf");
 }
 
-/* Reset default margin and padding */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-/* Style the body */
+
 body {
-  font-family: Arial, sans-serif; /* Change font family as needed */
-  background-color: #f0f0f0; /* Change background color as needed */
-  padding: 20px; /* Add padding to body */
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  padding: 10px;
   text-align: center;
-  margin-top: 50px;
-}
-
-/* Style the div containing the image */
-div:first-child {
-  text-align: center; /* Center align the content inside the div */
-}
-
-/* Style the div containing select and h1 */
-div:last-child {
-  display: flex; /* Use flexbox */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  flex-direction: column; /* Stack items vertically */
-  margin-bottom: 20px; /* Add margin between divs */
-}
-
-/* Style the select element */
-select {
-  padding: 10px; /* Add padding to select */
-  border-radius: 5px; /* Add border radius to select */
-  border: 1px solid #ccc; /* Add border to select */
-  margin-bottom: 10px; /* Add margin below select */
-}
-
-/* Style the h1 element */
-h1 {
   margin-top: 20px;
-  color: #333; /* Change text color as needed */
-  font-size: 24px; /* Change font size as needed */
-  font-weight: bold; /* Add font weight as needed */
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto 20px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+select {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+h1 {
+  margin-top: 15px;
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
   font-family: Meila, sans-serif;
 }
-img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  margin-bottom: 40px;
-}
+
 p {
   margin-top: 10px;
   font-family: Pecita, sans-serif;
-  font-size: 20px;
-  margin-bottom: 20px;
+  font-size: 16px;
+  margin-bottom: 15px;
 }
+
 .copyright {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 10px;
+  position: static;
+  margin-top: 20px;
 }
-@media screen and (max-width: 768px) {
-  p {
-    font-size: 6px;
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 5px;
+    margin-top: 10px;
   }
+
+  .image-container {
+    max-width: 250px;
+  }
+
+  select {
+    font-size: 14px;
+  }
+
   h1 {
-    font-size: 10px;
+    font-size: 18px;
   }
-}
-.image-container {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  margin: 0 auto;
+
+  p {
+    font-size: 14px;
+  }
 }
 
 .loader {
-  border: 5px solid #f3f3f3;
-  border-top: 5px solid #3498db;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   animation: spin 1s linear infinite;
   display: none;
   position: absolute;
