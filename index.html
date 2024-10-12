@@ -3,50 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hình Ảnh Mặt Trăng Chất Lượng Cao - My Moon</title>
-    <meta name="description" content="my moon" />
-    <meta name="keywords" content="my moon" />
+    <title>My Moon</title>
+    <meta
+      name="description"
+      content="Khám phá vẻ đẹp của Mặt Trăng qua các hình ảnh chất lượng cao từ 144p đến 1080p. Trải nghiệm độc đáo về vẻ đẹp của vệ tinh tự nhiên của Trái Đất."
+    />
+    <link
+      rel="icon"
+      href="https://i.pinimg.com/564x/87/a8/a3/87a8a378128df67cc09df6eda20be10f.jpg"
+      type="image/jpeg"
+    />
+
+    <meta
+      name="keywords"
+      content="mặt trăng, hình ảnh mặt trăng, chất lượng hình ảnh, my moon"
+    />
     <meta name="author" content="Zilong" />
-    <link rel="canonical" href="https://www.yourdomain.com/index.html" />
-    <meta property="og:title" content="my moon" />
-    <meta property="og:description" content="my moon" />  
+    <meta property="og:title" content="My Moon" />
+    <meta
+      property="og:description"
+      content="Trải nghiệm vẻ đẹp của Mặt Trăng qua các hình ảnh chất lượng cao từ 144p đến 1080p."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mymoon-zilong.vercel.app" />
     <meta
       property="og:image"
-      content="https://www.yourdomain.com/image/0.png"
+      content="https://i.pinimg.com/564x/87/a8/a3/87a8a378128df67cc09df6eda20be10f.jpg"
     />
-    <meta property="og:url" content="https://www.yourdomain.com/index.html" />
-    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://mymoon-zilong.vercel.app" />
     <link rel="stylesheet" href="style.css" />
-    <!-- Thêm preload cho hình ảnh đầu tiên -->
-    <link rel="preload" href="./image/0.png" as="image" />
-    <!-- Thêm async cho script -->
-    <script src="main.js" async></script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "My Moon",
-        "description": "Trang web cung cấp hình ảnh mặt trăng chất lượng cao",
-        "url": "https://www.yourdomain.com",
-        "author": {
-          "@type": "Person",
-          "name": "Zilong"
-        }
-      }
-    </script>
-    <link rel="preconnect" href="https://cloudflareimages.your-domain.com">
+    <link rel="preconnect" href="https://firebasestorage.googleapis.com" />
   </head>
   <body>
     <div class="image-container">
-      <div class="loader" id="loader"></div>
-      <img
-        src="https://cloudflareimages.your-domain.com/image-id"
-        alt="Moon image"
-        id="img"
-        width="300"
-        height="300"
-        loading="lazy"
-      />
+      <div class="image-placeholder" id="imagePlaceholder">
+        <div class="loader" id="loader"></div>
+        <img id="img" alt="Moon image" style="display: none" />
+      </div>
     </div>
     <div>
       <select id="changeImg" aria-label="Chọn từng cái bên dưới">
@@ -64,5 +57,6 @@
         Free to use for non-commercial purposes. Please attribute when using.
       </p>
     </div>
+    <script src="main.js"></script>
   </body>
 </html>
